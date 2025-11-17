@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Abner Herrera Chinea — IT Support Technician</title>
+  <meta name="description" content="Portfolio — Abner Herrera Chinea | IT Support Technician. Troubleshooting, networking fundamentals, hardware setup, Office 365, customer-focused support." />
+
+  <!-- Simple styling, responsive layout -->
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#94a3b8;
+      --accent:#4f46e5;
+      --glass: rgba(255,255,255,0.03);
+      --radius:16px;
+      --maxw:1000px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg, #071027 0%, #081226 50%, #071025 100%);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:28px;
+      display:flex;
+      justify-content:center;
+    }
+    .container{
+      width:100%;
+      max-width:var(--maxw);
+    }
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      margin-bottom:22px;
+    }
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .avatar{
+      width:64px;height:64px;border-radius:999px;
+      display:inline-grid;place-items:center;
+      background:linear-gradient(180deg,#111827,#0b1220);
+      box-shadow:0 6px 18px rgba(0,0,0,0.6);
+      border:1px solid rgba(255,255,255,0.04);
+      flex-shrink:0;
+    }
+    .avatar svg{width:46px;height:46px;opacity:0.9}
+    h1{font-size:18px;margin:0}
+    .subtitle{color:var(--muted);font-size:13px;margin-top:3px}
+
+    nav{display:flex;gap:12px;align-items:center}
+    nav a{
+      color:var(--muted);text-decoration:none;font-size:14px;padding:10px 12px;border-radius:10px;
+    }
+    nav a:hover{background:var(--glass);color:var(--accent)}
+
+    .content{
+      display:grid;
+      grid-template-columns: 320px 1fr;
+      gap:20px;
+      align-items:start;
+    }
+
+    /* left column card */
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow: 0 6px 20px rgba(2,6,23,0.6);
+      border:1px solid rgba(255,255,255,0.03);
+    }
+
+    .profile-name{font-weight:700;font-size:18px;margin-top:8px}
+    .role{color:var(--muted);font-size:13px;margin-bottom:10px}
+
+    .contact-list{display:flex;flex-direction:column;gap:8px;font-size:14px}
+    .chip{background:rgba(255,255,255,0.02);padding:8px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+    .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:10px}
+    .skill{background:linear-gradient(90deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));padding:8px;border-radius:8px;font-size:13px;text-align:center}
+
+    /* right column content */
+    .section{margin-bottom:18px}
+    .section h2{margin:0 0 8px 0;font-size:16px}
+    .lead{color:var(--muted);font-size:14px;margin-bottom:10px}
+
+    .timeline{display:flex;flex-direction:column;gap:12px}
+    .timeline-item{background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+    .when{color:var(--muted);font-size:12px}
+    .role-title{font-weight:700;margin-top:4px}
+
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .project{
+      background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));
+      padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.02);
+      display:flex;flex-direction:column;gap:8px;
+    }
+    .project a{color:var(--accent);text-decoration:none;font-weight:600}
+
+    footer{
+      margin-top:18px;color:var(--muted);font-size:13px;text-align:center
+    }
+
+    /* responsive */
+    @media (max-width:880px){
+      .content{grid-template-columns:1fr; padding-bottom:10px}
+      header{flex-direction:column;align-items:flex-start;gap:10px}
+      .avatar{width:56px;height:56px}
+      nav{flex-wrap:wrap}
+    }
+
+    /* small utilities */
+    .btn{
+      display:inline-block;padding:8px 12px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#7c3aed);color:white;text-decoration:none;font-weight:600;border:none;cursor:pointer;
+    }
+    .muted{color:var(--muted)}
+    .small{font-size:13px}
+    .topbar-right{display:flex;gap:8px;align-items:center}
+    .theme-toggle{background:transparent;border:1px solid rgba(255,255,255,0.03);padding:8px;border-radius:10px;cursor:pointer}
+  </style>
+</head>
+<body>
+  <div class="container" id="top">
+    <header>
+      <div class="brand">
+        <div class="avatar" aria-hidden="true">
+          <!-- circle placeholder SVG -->
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="8" r="3.2" stroke="white" stroke-opacity="0.9" stroke-width="0.9" fill="rgba(255,255,255,0.02)"/>
+            <path d="M4 20c0-3.3 3.6-6 8-6s8 2.7 8 6" stroke="white" stroke-opacity="0.8" stroke-width="0.9" fill="none"/>
+          </svg>
+        </div>
+        <div>
+          <h1>Abner Herrera Chinea</h1>
+          <div class="subtitle">IT Support Technician — B.S. Cybersecurity</div>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <nav aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="theme-toggle" id="themeBtn" title="Toggle theme">Toggle</button>
+      </div>
+    </header>
+
+    <main class="content" role="main">
+      <!-- LEFT COLUMN -->
+      <aside class="card" aria-label="Profile">
+        <div style="display:flex;flex-direction:column;align-items:start;">
+          <div class="profile-name">Abner Herrera Chinea</div>
+          <div class="role">IT Service Support Technician</div>
+
+          <div style="margin-top:12px" class="muted small">
+            Driven and adaptable IT professional with a B.S. in Cybersecurity and hands-on experience in technical troubleshooting, system setup, and user support. Currently pursuing CompTIA Network+ certification.
+          </div>
+
+          <div style="margin-top:14px">
+            <div class="small muted">Contact</div>
+            <div class="contact-list" style="margin-top:8px">
+              <div class="chip"><strong>Email:</strong> <a href="mailto:HABNER0910@GMAIL.COM">HABNER0910@GMAIL.COM</a></div>
+              <div class="chip"><strong>Phone:</strong> (512) 716-5248</div>
+              <div class="chip"><strong>Location:</strong> Del Valle, TX</div>
+              <div class="chip"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/abner-herrera-chinea/" target="_blank" rel="noopener">linkedin.com/in/abner-herrera-chinea</a></div>
+            </div>
+          </div>
+
+          <div style="margin-top:14px">
+            <div class="small muted">Core Competencies</div>
+            <div style="margin-top:8px" class="skills-grid">
+              <div class="skill">Technical Troubleshooting</div>
+              <div class="skill">Hardware Setup</div>
+              <div class="skill">Office 365</div>
+              <div class="skill">Network Fundamentals</div>
+              <div class="skill">Customer Service</div>
+              <div class="skill">Documentation</div>
+            </div>
+          </div>
+
+          <div style="margin-top:14px">
+            <div class="small muted">Languages</div>
+            <div style="margin-top:8px" class="skills-grid">
+              <div class="skill">English</div>
+              <div class="skill">Español</div>
+            </div>
+          </div>
+
+          <div style="margin-top:14px">
+            <a class="btn" href="#contact">Hire / Contact</a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- RIGHT COLUMN -->
+      <section>
+        <div id="about" class="section card">
+          <h2>About</h2>
+          <p class="lead">I’m an IT professional with a strong foundation in cybersecurity, networking, and system troubleshooting. I enjoy diagnosing issues, optimizing systems, and bringing clarity to complex technical problems. My current focus is advancing my networking knowledge while growing into a full-time IT support or system admin role.</p>
+
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:6px">
+            <div class="chip">B.S. Cybersecurity — Dallas Baptist University</div>
+            <div class="chip">CompTIA Network+ (In Progress)</div>
+            <div class="chip">Tools: Wireshark · VirtualBox · Office 365 · Azure (Intro)</div>
+          </div>
+        </div>
+
+        <div id="skills" class="section">
+          <h2>Technical Skills</h2>
+          <div class="card">
+            <div style="display:flex;flex-wrap:wrap;gap:12px">
+              <div style="min-width:160px">
+                <div class="small muted">Operating Systems</div>
+                <div class="small">Windows 10/11 · Ubuntu/Linux</div>
+              </div>
+              <div style="min-width:160px">
+                <div class="small muted">Networking</div>
+                <div class="small">TCP/IP · DHCP · DNS · VLAN concepts</div>
+              </div>
+              <div style="min-width:160px">
+                <div class="small muted">Languages & Tools</div>
+                <div class="small">Python · Java · Git · GitHub</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="experience" class="section">
+          <h2>Experience</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="when">Jan 2025 – Present</div>
+              <div class="role-title">High School Substitute — Del Valle ISD</div>
+              <div class="small muted">Del Valle, TX</div>
+              <p class="small" style="margin-top:8px">
+                Provided first-line technical assistance for classroom computers, projectors, and software systems. Supported teachers and staff with troubleshooting login, connectivity, and device performance issues. Created and maintained records of classroom setups and issues for continuity.
+              </p>
+            </div>
+
+            <div class="timeline-item">
+              <div class="when">Jun 2025 – Aug 2025</div>
+              <div class="role-title">Sales Representative — Cricket Wireless</div>
+              <div class="small muted">Del Valle, TX</div>
+              <p class="small" style="margin-top:8px">
+                Diagnosed and resolved mobile device and connectivity issues, assisted customers with device configuration and software troubleshooting, and communicated technical information in approachable terms.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div id="projects" class="section">
+          <h2>Projects</h2>
+          <div class="projects">
+            <div class="project">
+              <div style="font-weight:700">DNS Security Analysis</div>
+              <div class="small muted">University project — DNS security and hardening</div>
+              <p class="small">Analyzed DNS configurations and proposed mitigations to reduce spoofing and cache poisoning risks. Created documentation and recommended best practices for hardening DNS services in a lab environment.</p>
+              <a href="#" aria-label="Project link (placeholder)">View details</a>
+            </div>
+
+            <div class="project">
+              <div style="font-weight:700">Insider Threat Prevention</div>
+              <div class="small muted">Coursework project</div>
+              <p class="small">Developed detection scenarios and process recommendations to identify potential insider threats. Focused on access controls, monitoring, and incident response documentation.</p>
+              <a href="#" aria-label="Project link (placeholder)">View details</a>
+            </div>
+
+            <div class="project">
+              <div style="font-weight:700">Software Vulnerability Testing</div>
+              <div class="small muted">Security lab</div>
+              <p class="small">Performed controlled vulnerability testing and produced readable reports on findings and suggested fixes for discovered issues.</p>
+              <a href="#" aria-label="Project link (placeholder)">View details</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="education" class="section card">
+          <h2>Education</h2>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div>
+              <div style="font-weight:700">Dallas Baptist University</div>
+              <div class="small muted">B.S. in Cybersecurity — July 2021 - May 2024</div>
+              <div class="small" style="margin-top:6px">Relevant coursework: Network Security, Software Security, Social Engineering</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="contact" class="section card">
+          <h2>Contact</h2>
+          <p class="lead">I’m open to IT support, help desk, and entry-level system admin roles. If you’d like to work together or see more of my work, reach out — I reply quickly.</p>
+
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn" href="mailto:HABNER0910@GMAIL.COM">Email Me</a>
+            <a class="btn" href="https://www.linkedin.com/in/abner-herrera-chinea/" target="_blank" rel="noopener">LinkedIn</a>
+            <!-- Replace 'resume.pdf' with the actual uploaded filename in your repo -->
+            <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+          </div>
+
+          <div style="margin-top:12px" class="muted small">Authorized to work in the U.S. — able to provide onsite support and lift up to 50 lbs.</div>
+        </div>
+
+        <footer>
+          Built with care • © <span id="year"></span> Abner Herrera Chinea
+        </footer>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // small scripts: smooth scroll, year, theme toggle
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        // allow normal if it's just '#'
+        if(this.getAttribute('href') === '#') return;
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target){
+          window.scrollTo({top: target.offsetTop - 18, behavior: 'smooth'});
+        }
+      });
+    });
+
+    // simple theme toggle that inverts colors lightly (works mostly as a preference toggle)
+    const themeBtn = document.getElementById('themeBtn');
+    themeBtn.addEventListener('click', ()=>{
+      document.documentElement.style.setProperty('--bg', document.documentElement.style.getPropertyValue('--bg') ? '' : '#f6f8fb');
+      // quick invert of colors by toggling a class
+      if(document.body.classList.contains('light')){
+        document.body.classList.remove('light');
+        document.body.style.background = 'linear-gradient(180deg, #071027 0%, #081226 50%, #071025 100%)';
+      } else {
+        document.body.classList.add('light');
+        document.body.style.background = 'linear-gradient(180deg, #f7f9fc 0%, #eef2ff 50%, #f7f9fc 100%)';
+        document.body.style.color = '#081225';
+      }
+    });
+
+    // small accessibility: focus outlines for keyboard users
+    document.addEventListener('keyup', (e)=>{
+      if(e.key === "Tab") document.documentElement.style.setProperty('outline', '0');
+    });
+  </script>
+</body>
+</html>
